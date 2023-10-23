@@ -12,8 +12,14 @@
     }
     .marketstore{
         margin: 10%;
-
+        border : 2px solid #000; 
+        overflow:hidden;
     }
+    .marketstore div{
+        min-height: 200px;
+        padding: 10px;
+    }
+
     .marketstore h1{
         font-size: 42px;
         font-style: initial;
@@ -30,6 +36,7 @@
         width: 110%;
         border-radius: 15px;
         padding-left: 50px;
+        float:left; 
     }
     .selectgun .sele_in_qun{
         border: 1px solid black;
@@ -66,7 +73,15 @@
     .tab1 div{
         background-color: #8c8787;
     }
-
+    @media screen and (max-width: 400px) {
+    .selet_g_q { 
+        float: none;
+        margin-right:0;
+        width:auto;
+        border:0;
+        border-bottom:2px solid #000;    
+    }
+}
     @media screen and (max-width: 500px) { 
         table{
             width: 70%;
