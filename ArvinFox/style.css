@@ -1,0 +1,64 @@
+body
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.front-end
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+.main-link
+{
+    text-decoration: none;
+    text-align: left;
+}
+.contents
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+.contents table
+{
+    background-color: rgba(117, 123, 123, 0.314);
+    border-radius: 2%;
+}
+.container
+{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 2%;
+}
+.con-1
+{
+}
+.content-row
+{
+    height: 60px;
+}
+.content-row td
+{
+    width: 140px;
+    text-align: center;
+}
+button
+{
+    font-family: 'Poppins', sans-serif;
+    height: 40px;
+    width: 110px;
+}
+select
+{
+    width: 50px;
+    text-align: center;
+}
+input
+{
+    display: inline-block;
+    width: 100px;
+}
