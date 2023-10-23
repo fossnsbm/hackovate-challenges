@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -14,11 +15,11 @@
                 <div>
                     <tr>
                         <td><label for="">Select Guns Quantity:</label></td>
-                        <td><select name="qty" id="qty">
-                                <option value="op1">1</option>
-                                <option value="op2">2</option>
-                                <option value="op3">3</option>
-                                <option value="op4">4</option>
+                        <td><select name="qty-1" id="qty-1">
+                                <option value="1" >1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
                             </select></td>
                     </tr>
                     <tr class="menu-box">
@@ -40,7 +41,7 @@
     
                     <tr>
                         <td><label for="">Gun Subtotal:</label></td>
-                        <td><input type="text" name="subtotal" id="subtotal"></td>
+                        <td>$</td>
                     </tr>
                 </div>
             </table>
@@ -50,11 +51,11 @@
                 <div>
                     <tr>
                         <td><label for="">Select Inventory Quantity:</label></td>
-                        <td><select name="qty" id="qty">
-                                <option value="op1">1</option>
-                                <option value="op2">2</option>
-                                <option value="op3">3</option>
-                                <option value="op4">4</option>
+                        <td><select name="qty" id="qty-1">
+                                <option value="op1" id="qty1-1">1</option>
+                                <option value="op2" id="qty1-2">2</option>
+                                <option value="op3" id="qty1-3">3</option>
+                                <option value="op4" id="qty1-4">4</option>
                             </select></td>
                     </tr>
                     <div>
@@ -77,11 +78,12 @@
                     </div>
                     <tr>
                         <td><label for="">Gun Subtotal:</label></td>
-                        <td><input type="text" name="subtotal" id="subtotal"></td>
+                        <td>$</td>
                     </tr>
                 </div>
             </table>
         </form>
     </div>
+    <div class="order-button"><button type="button" onclick="getQuantity()">Order Now</button></div>
 </body>
 </html>
