@@ -42,6 +42,7 @@ const GunSelector = () => {
     setSelectedGuns([]);
     setGunQTY(1);
     setInventoryQTY(1);
+    // hello
   }
 
   function getTotal() {
