@@ -32,11 +32,48 @@ export default function Home() {
   const [gunsPrice, setGunsPrice] = React.useState(0);
   const [invtPrice, setInvtPrice] = React.useState(0);
 
-  const [gunsList, setGunsList] = React.useState({});
-  const [invtList, setInvtList] = React.useState({});
+  const [gunsList, setGunsList] = React.useState({
+    0: 0,
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: 0,
+  });
+  const [invtList, setInvtList] = React.useState({
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: 0,
+  });
 
   function processGun(index, mode) {
     if (mode > 0) {
+      gunsList[index] = gunsList[index] + 1;
+
+      let x = 0;
+      for (const [key, value] of Object.entries(gunsList)) {
+        if (value > 0) {
+          x += 1;
+        }
+
+        if (x > gunsQuantity) {
+          alert(`You can only select upto ${gunsQuantity} of guns!`);
+          break;
+        }
+      }
+
       setGunsPrice(gunsPrice + guns[index].price);
     } else {
       setGunsPrice(gunsPrice - guns[index].price);
@@ -46,6 +83,19 @@ export default function Home() {
   }
   function processInv(index, mode) {
     if (mode > 0) {
+      invtList[index] = invtList[index] + 1;
+
+      let x = 0;
+      for (const [key, value] of Object.entries(invtList)) {
+        if (value > 0) {
+          x += 1;
+        }
+
+        if (x > invtQuantity) {
+          alert(`You can only select upto ${invtQuantity} of inventories!`);
+          break;
+        }
+      }
       setInvtPrice(gunsPrice + guns[index].price);
     } else {
       setInvtPrice(gunsPrice - guns[index].price);
