@@ -1,0 +1,50 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.cardHolder {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.card {
+  padding: 30px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+
+  table {
+    text-align: center;
+    border-collapse: collapse;
+    td,
+    th {
+      border: 1px solid black;
+    }
+  }
+
+  .rail {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    label {
+      &:first-child {
+        margin-right: auto;
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+}
