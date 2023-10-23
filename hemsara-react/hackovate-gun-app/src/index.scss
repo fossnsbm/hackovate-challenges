@@ -18,6 +18,18 @@
   align-items: center;
 }
 
+button {
+  margin-top: 20px;
+  padding: 15px 50px;
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: transparent;
+  box-shadow: 6px 6px 0px -3px rgba(0, 0, 0, 0.75);
+
+}
+
 .App {
   height: 100vh;
   display: flex;
@@ -58,6 +70,15 @@ h1 {
 
   display: inline-block;
   border: 1px solid black;
+
+}
+
+.selected {
+  font-weight: 500;
+  border: 2px solid black !important;
+  box-shadow: 2px 7px 0px -2px rgba(0, 0, 0, 0.75);
+
+
 }
 
 .gun_total {
