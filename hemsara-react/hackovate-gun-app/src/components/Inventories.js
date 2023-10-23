@@ -10,6 +10,7 @@ function Inventories({
   console.log(qty);
 
   function addItem(inventory) {
+    // this is the part where issue 4 belongs | this will handle the qty exceeded state
     let contains = selectedInventories.some(
       (item) => item.name === inventory.name
     );

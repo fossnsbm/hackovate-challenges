@@ -2,6 +2,7 @@ import "../index.scss";
 
 function Guns({ guns, qty, selectedGuns, setGunQTY, setSelectedGuns }) {
   function addItem(gun) {
+    // this is the part where issue 4 belongs | this will handle the qty exceeded state
     let contains = selectedGuns.some((item) => item.name === gun.name);
     if (selectedGuns.length >= qty && !contains) {
       alert("Quantity limit exceeded");

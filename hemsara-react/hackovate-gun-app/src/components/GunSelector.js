@@ -31,6 +31,8 @@ const GunSelector = () => {
     { name: "Landmine", price: 4000 },
   ]);
 
+  function placeOrder() {}
+
   return (
     <div className="col">
       <h1 className="heading-large">GUNSMITH.ONION</h1>
@@ -50,7 +52,7 @@ const GunSelector = () => {
           setSelectedInventory={setSelectedInventories}
         />
       </div>
-      <button>Order now</button>
+      <button onClick={() => placeOrder()}>Order now</button>
     </div>
   );
 };
