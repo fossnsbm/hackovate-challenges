@@ -15,33 +15,33 @@
                 <div>
                     <tr>
                         <td><label for="">Select Guns Quantity:</label></td>
-                        <td><select name="qty-1" id="qty-1">
-                                <option value="1" >1</option>
+                        <td><select name="qty-1" id="qty-1" onchange="getQuantity()">
+                                <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </select></td>
                     </tr>
                     <tr class="menu-box">
-                            <td><button type="button">Assault-Riffle</button></td>
-                            <td><button type="button">Pistol</button></td>
+                        <td><button type="button" value="1000" id="ar" onclick="calculatePrice(1000)">Assault-Riffle</button></td>
+                        <td><button type="button" value="50" id="ps" onclick="calculatePrice(50)">Pistol</button></td>
                     </tr>
                     <tr class="menu-box">
-                            <td><button type="button">Sniper</button></td>
-                            <td><button type="button">Revolver</button></td>
+                        <td><button type="button" value="2000" id="sp" onclick="calculatePrice(2000)">Sniper</button></td>
+                        <td><button type="button" value="500" id="re" onclick="calculatePrice(500)">Revolver</button></td>
                     </tr>
                     <tr class="menu-box">
-                            <td><button type="button">Shotgun</button></td>
-                            <td><button type="button">RPG</button></td>
+                        <td><button type="button" value="1500" id="sg" onclick="calculatePrice(1500)">Shotgun</button></td>
+                        <td><button type="button" value="3000" id="rg" onclick="calculatePrice(3000)">RPG</button></td>
                     </tr>
                     <tr class="menu-box">
-                            <td><button type="button">Machine-Gun</button></td>
-                            <td><button type="button">Laser-Gun</button></td>
+                        <td><button type="button" value="2500" id="mg" onclick="calculatePrice(2500)">Machine-Gun</button></td>
+                        <td><button type="button" value="3500" id="lg" onclick="calculatePrice(3500)">Laser-Gun</button></td>
                     </tr>
     
                     <tr>
                         <td><label for="">Gun Subtotal:</label></td>
-                        <td>$</td>
+                        <td id="price"></td>
                     </tr>
                 </div>
             </table>
@@ -51,11 +51,11 @@
                 <div>
                     <tr>
                         <td><label for="">Select Inventory Quantity:</label></td>
-                        <td><select name="qty" id="qty-1">
-                                <option value="op1" id="qty1-1">1</option>
-                                <option value="op2" id="qty1-2">2</option>
-                                <option value="op3" id="qty1-3">3</option>
-                                <option value="op4" id="qty1-4">4</option>
+                        <td><select name="qty" id="qty-2" onchange="getQuantity()">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
                             </select></td>
                     </tr>
                     <div>
@@ -84,6 +84,6 @@
             </table>
         </form>
     </div>
-    <div class="order-button"><button type="button" onclick="getQuantity()">Order Now</button></div>
+    <div class="order-button"><button type="button">Order Now</button></div>
 </body>
 </html>
