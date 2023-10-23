@@ -115,6 +115,34 @@ export default function Home() {
     return null;
   }
 
+  function validateOrder() {
+    let x = 0;
+    for (const [key, value] of Object.entries(gunsList)) {
+      if (value > 0) {
+        x += 1;
+      }
+    }
+
+    if (x != gunsQuantity) {
+      alert(
+        `You can only select ${gunsQuantity} of guns you only have selected ${x}!`,
+      );
+    }
+
+    x = 0;
+    for (const [key, value] of Object.entries(invtList)) {
+      if (value > 0) {
+        x += 1;
+      }
+    }
+
+    if (x != invtQuantity) {
+      alert(
+        `You can only select ${invtQuantity} of guns you only have selected ${x}!`,
+      );
+    }
+  }
+
   return (
     <>
       <Head>
@@ -247,7 +275,7 @@ export default function Home() {
           </div>
         </div>
 
-        <button>Order Now</button>
+        <button onClick={validateOrder()}>Order Now</button>
       </main>
     </>
   );
