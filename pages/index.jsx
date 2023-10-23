@@ -2,42 +2,46 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 
+import React from "react";
+
 const inter = Inter({ subsets: ["latin"] });
 
-const guns = [
-  { name: "Assault-Rifle", price: 1000 },
-  { name: "Sniper", price: 2000 },
-  { name: "Shotgun", price: 1500 },
-  { name: "Revolver", price: 500 },
-  { name: "Machine-Gun", price: 2500 },
-  { name: "Pistol", price: 50 },
-  { name: "RPG", price: 3000 },
-  { name: "Laser-Gun", price: 3500 },
-];
-
-const invt = [
-  { name: "Medi-Kit", price: 500 },
-  { name: "Molotov", price: 1000 },
-  { name: "Grenade", price: 1500 },
-  { name: "Knife", price: 2000 },
-  { name: "Sword", price: 2500 },
-  { name: "Armour", price: 3000 },
-  { name: "C4", price: 3500 },
-  { name: "Landmine", price: 4000 },
-];
-
-var gunsPrice = 0;
-var invtPrice = 0;
-
-function addToGunPrice(index) {
-  gunsPrice += guns[index].price;
-}
-
-function addToInvPrice(index) {
-  invtPrice += invt[index].price;
-}
-
 export default function Home() {
+  const guns = [
+    { name: "Assault-Rifle", price: 1000 },
+    { name: "Sniper", price: 2000 },
+    { name: "Shotgun", price: 1500 },
+    { name: "Revolver", price: 500 },
+    { name: "Machine-Gun", price: 2500 },
+    { name: "Pistol", price: 50 },
+    { name: "RPG", price: 3000 },
+    { name: "Laser-Gun", price: 3500 },
+  ];
+
+  const invt = [
+    { name: "Medi-Kit", price: 500 },
+    { name: "Molotov", price: 1000 },
+    { name: "Grenade", price: 1500 },
+    { name: "Knife", price: 2000 },
+    { name: "Sword", price: 2500 },
+    { name: "Armour", price: 3000 },
+    { name: "C4", price: 3500 },
+    { name: "Landmine", price: 4000 },
+  ];
+
+  // const [hydrated, setHydrated] = React.useState(false);
+  // React.useEffect(() => {
+  //   setHydrated(true);
+  // }, []);
+  // if (!hydrated) {
+  //   return null;
+  // }
+
+  const [gunsPrice, setGunsPrice] = React.useState(0);
+  const [invtPrice, setInvtPrice] = React.useState(0);
+
+  // let number = numeros();
+
   return (
     <>
       <Head>
@@ -52,12 +56,7 @@ export default function Home() {
 
         <div className={styles.cardHolder}>
           <div className={styles.card}>
-            <span className={styles.rail}>
-              <label>Select Guns Quantity</label>
-              <label>
-                <input type='number' />
-              </label>
-            </span>
+            <h4>Select Guns Quantity</h4>
 
             <table>
               <thead>
@@ -67,26 +66,35 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <br />
+                </tr>
                 {guns.map((gun, index) => (
-                  <tr key={index} onClick={addToGunPrice(index)}>
+                  <tr
+                    key={index}
+                    onClick={() => {
+                      setGunsPrice(guns[index].price + gunsPrice);
+                    }}
+                  >
                     <td>{gun.name}</td>
                     <td>{gun.price}</td>
                   </tr>
                 ))}
+
+                <tr>
+                  <br />
+                </tr>
+
+                <tr>
+                  <td>Inventory Subtotal</td>
+                  <td>${gunsPrice}</td>
+                </tr>
               </tbody>
             </table>
-
-            <span className={styles.rail}>
-              <label>Gun Subtotal</label>
-              <label>${gunsPrice}</label>
-            </span>
           </div>
 
           <div className={styles.card}>
-            <span className={styles.rail}>
-              <label>Select Inventory Quantity</label>
-              <input type='number' />
-            </span>
+            <h4>Select Inventory Quantity</h4>
 
             <table>
               <thead>
@@ -96,19 +104,35 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <br />
+                </tr>
                 {invt.map((inv, index) => (
-                  <tr key={index} onClick={addToInvPrice(index)}>
+                  <tr
+                    key={index}
+                    onClick={() => {
+                      setInvtPrice(invt[index].price + invtPrice);
+                    }}
+                  >
                     <td>{inv.name}</td>
                     <td>{inv.price}</td>
                   </tr>
                 ))}
+                <tr>
+                  <br />
+                </tr>
+
+                <tr>
+                  <td>Inventory Subtotal</td>
+                  <td>${invtPrice}</td>
+                </tr>
               </tbody>
             </table>
-
+            {/*
             <span className={styles.rail}>
-              <label>Inventory Subtotal</label>
-              <label>${invtPrice}</label>
-            </span>
+              <label></label>
+              <label></label>
+            </span> */}
           </div>
         </div>
 

@@ -6,6 +6,30 @@
   justify-content: center;
   gap: 30px;
   flex-direction: column;
+  h4 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  h3,
+  h4 {
+    margin: 0 !important;
+  }
+
+  button {
+    font-family: inherit;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+    // background: rgb(213, 204, 204);
+    background: white;
+  }
+
+  input {
+    border: none;
+  }
 }
 
 .cardHolder {
@@ -15,20 +39,38 @@
 }
 
 .card {
+  min-width: 20vw;
   padding: 30px;
   border: 1px solid grey;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 15px;
 
   table {
+    padding: 10px;
+    background: #d9d8d8;
+    border-radius: 5px;
     text-align: center;
-    border-collapse: collapse;
+    // border-collapse: collapse;
+
     td,
     th {
-      border: 1px solid black;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+      background: #efeeef;
+    }
+
+    tr {
+      cursor: pointer;
+
+      & :first-child,
+      &:last-child {
+        cursor: inherit;
+      }
     }
   }
 
