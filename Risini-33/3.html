@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const gunButtons = document.querySelectorAll(".gun");
+            const inventoryButtons = document.querySelectorAll(".inventory");
+            const gunQuantity = document.getElementById("gun-quantity");
+            const inventoryQuantity = document.getElementById("inventory-quantity");
+
+            let gunSubtotal = 0;
+            let inventorySubtotal = 0;
+
+            gunButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const price = parseFloat(button.dataset.price);
+                    if (button.classList.contains("selected")) {
+                        gunSubtotal -= price;
+                    } else {
+                        gunSubtotal += price;
+                    }
+                    button.classList.toggle("selected");
+                    document.getElementById("gun-subtotal").textContent = `$${gunSubtotal.toFixed(2)}`;
+                });
+            });
+
+            inventoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const price = parseFloat(button.dataset.price);
+                    if (button.classList.contains("selected")) {
+                        inventorySubtotal -= price;
+                    } else {
+                        inventorySubtotal += price;
+                    }
+                    button.classList.toggle("selected");
+                    document.getElementById("inventory-subtotal").textContent = `$${inventorySubtotal.toFixed(2)}`;
+                });
+            });
+        });
+    </script>
+
+<style>
+    .selected-item {
+        background-color: #ffeeba;
+        padding: 4px;
+        margin: 2px;
+        border-radius: 4px;
+    }
+</style>
+    
+</head>
+<body>
+    <h2>Gunsmith.onion</h2>
+    <table align="left", style="outline-style: inset ; padding:14px; border-radius: 12px;" class="section">
+        <tr>
+            <td>Select Guns Quantity : </td>
+            <td>
+               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <select id="gun-quantity" style="width:2cm; height:0.5cm;">
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4" >4</option>
+                  <option value="5">5</option>
+                  <option value="6" >6</option>
+                  <option value="7">7</option>
+                  <option value="8" >8</option>
+                </select></td>
+            
+        </tr>
+        <tr>
+            <td> <button id="showAlertButton" class="gun" style="width:3cm; height:1cm;" data-price="500">Assault-Rifle</button></td>
+            <td> <button id="showAlertButton" class="gun" style="width:3cm; height:1cm;" data-price="300">Pistol</button></td>
+        </tr>
+        <tr>
+            <td> <button  id="showAlertButton" class="gun" style="width:3cm; height:1cm;" data-price="500">Sniper</button></td>
+            <td> <button  id="showAlertButton"class="gun" style="width:3cm; height:1cm;" data-price="500">Revolver</button></td>
+
+        </tr>
+        <tr>
+            <td> <button id="showAlertButton" class="gun" style="width:3cm; height:1cm;"data-price="500">Shotgun</button></td>
+            <td> <button id="showAlertButton"class="gun" style="width:3cm; height:1cm;"data-price="500">RPG</button></td>
+
+        </tr>
+        <tr>
+            <td> <button id="showAlertButton" class="gun" style="width:3cm; height:1cm;"data-price="500">Machine-Gun</button></td>
+            <td> <button id="showAlertButton" class="gun" style="width:3cm; height:1cm;"data-price="500">Laser-Gun</button></td>
+
+        </tr>
+        
+    <tr>
+        <td> Gun Subtotal:</td>
+        <td id="gun-subtotal">$0.00</td>
+    </tr>
+    </table>
+
+    <table align="right", style="outline-style: inset ;padding:14px; border-radius: 12px;">
+        <tr>
+            <td>Select Inventory Quantity : </td>
+            <td>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <select id="inventory-quantity"  style="width:2cm; height:0.5cm;">
+                    <option value="1">1</option>
+                    <option value="2" >2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4" >4</option>
+                    <option value="5">5</option>
+                    <option value="6" >6</option>
+                    <option value="7">7</option>
+                    <option value="8" >8</option>
+                </select></td>
+            
+        </tr>
+        <tr>
+            <td> <button id="showAlertButton" class="inventory" style="width:3cm; height:1cm;" data-price="100">Medi-Kit</button></td>
+            <td> <button id="showAlertButton" class="inventory" style="width:3cm; height:1cm;" data-price="50">Molotov</button></td>
+        </tr>
+        
+       
+        <tr>
+            <td> <button id="showAlertButton" class="inventory" style="width:3cm; height:1cm;" data-price="500">Grenade</button></td>
+            <td> <button id="showAlertButton" class="inventory" style="width:3cm; height:1cm;"data-price="500">Sword</button></td>
+
+        </tr>
+        <tr>
+            <td> <button id="showAlertButton" class="inventory" style="width:3cm; height:1cm;"data-price="500">Knife</button></td>
+            <td> <button id="showAlertButton"class="inventory" style="width:3cm; height:1cm;"data-price="500">Armour</button></td>
+
+        </tr>
+        <tr>
+            <td> <button id="showAlertButton" class="inventory" style="width:3cm; height:1cm;"data-price="500">Land-Mine</button></td>
+            <td> <button id="showAlertButton" class="inventory" style="width:3cm; height:1cm;"data-price="500">C4</button></td>
+
+        </tr>
+        <tr>
+            <td> Inventory Subtotal:</td>
+            <td id="inventory-subtotal">$0.00</td>
+        </tr>
+    </table>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <center><button  style="width:3cm; height:1cm;">Order Now</button></center>
+</body>
+
+</html>
