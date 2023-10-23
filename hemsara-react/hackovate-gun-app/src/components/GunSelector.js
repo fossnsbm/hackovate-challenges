@@ -3,6 +3,12 @@ import "../index.scss";
 import Guns from "./Guns";
 import Inventories from "./Inventories";
 const GunSelector = () => {
+  const [gunQTY, setGunQTY] = useState(1);
+  const [inventoryQTY, setInventoryQTY] = useState(1);
+
+  const [selectedGuns, setSelectedGuns] = useState([]);
+  const [selectedInventories, setSelectedInventories] = useState([]);
+
   const [guns, setGuns] = useState([
     { name: "Assault-Rifle", price: 1000 },
     { name: "Sniper", price: 2000 },
@@ -29,9 +35,22 @@ const GunSelector = () => {
     <div className="col">
       <h1 className="heading-large">GUNSMITH.ONION</h1>
       <div className="gun_selector__bg">
-        <Guns guns={guns} />
-        <Inventories inventories={inventories} />
+        <Guns
+          guns={guns}
+          qty={gunQTY}
+          selectedGuns={selectedGuns}
+          setGunQTY={setGunQTY}
+          setSelectedGuns={setSelectedGuns}
+        />
+        <Inventories
+          inventories={inventories}
+          qty={inventoryQTY}
+          selectedInventories={selectedInventories}
+          setInventoryQTY={setInventoryQTY}
+          setSelectedInventory={setSelectedInventories}
+        />
       </div>
+      <button>Order now</button>
     </div>
   );
 };
