@@ -44,6 +44,8 @@ const GunSelector = () => {
     setInventoryQTY(1);
   }
 
+  function hello() {}
+
   function getTotal() {
     const gunTotal = selectedGuns.reduce(
       (prev, current) => prev + current.price,
