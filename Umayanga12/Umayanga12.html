@@ -70,12 +70,14 @@
     @media screen and (max-width: 500px) { 
         table{
             width: 70%;
+            flex-direction: column;
         }
     
     } 
     @media screen and (max-width: 800px) {
     table {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    width: 100%; 
+    flex-direction: column;
 }
 }
 button{
@@ -86,7 +88,7 @@ button{
 </style>
 <body>
     <form action="#">
-        <div class="marketstore">
+        <div class="marketstore container">
             <h1>Gunsmith.onion</h1>
         <div class="selectgun col-sm-8 .col-xl-6 .col-lg-8 .col-md-12 .col-">
             <div class="selet_g_q">
@@ -102,7 +104,7 @@ button{
                     border-radius: 4px;
                     width: 400px;
                     margin-bottom: 2%;
-                    ">
+                    "  >
                             <tr>
                                 <td><Button style="padding:5px; margin: 2%;">Assault-Rifile</Button></td>
                                 <td><button style="padding:5px; margin: 2%;">Pistol</button></td>
