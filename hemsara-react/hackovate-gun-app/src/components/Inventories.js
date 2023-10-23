@@ -8,14 +8,17 @@ function Inventories({
   setSelectedInventory,
 }) {
   console.log(qty);
+
   function addItem(inventory) {
-    if (selectedInventories.length >= qty) {
-      alert("Quantity limit exceeded");
-      return;
-    }
+    // this is the part where issue 4 belongs | this will handle the qty exceeded state
     let contains = selectedInventories.some(
       (item) => item.name === inventory.name
     );
+    if (selectedInventories.length >= qty && !contains) {
+      alert("Quantity limit exceeded");
+      return;
+    }
+
     if (!contains) {
       setSelectedInventory([...selectedInventories, inventory]);
     } else {

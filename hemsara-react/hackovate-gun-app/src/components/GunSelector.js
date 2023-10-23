@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../index.scss";
 import Guns from "./Guns";
 import Inventories from "./Inventories";
+
 const GunSelector = () => {
   const [gunQTY, setGunQTY] = useState(1);
   const [inventoryQTY, setInventoryQTY] = useState(1);
@@ -31,6 +32,30 @@ const GunSelector = () => {
     { name: "Landmine", price: 4000 },
   ]);
 
+  function placeOrder() {
+    if (selectedGuns.length == 0 || selectedInventories.length == 0) {
+      alert("Please select items");
+      return;
+    }
+    alert("Thank you for using gunsmith");
+    setSelectedInventories([]);
+    setSelectedGuns([]);
+    setGunQTY(1);
+    setInventoryQTY(1);
+  }
+
+  function getTotal() {
+    const gunTotal = selectedGuns.reduce(
+      (prev, current) => prev + current.price,
+      0
+    );
+    const inventoryTotal = selectedInventories.reduce(
+      (prev, current) => prev + current.price,
+      0
+    );
+    return gunTotal + inventoryTotal;
+  }
+
   return (
     <div className="col">
       <h1 className="heading-large">GUNSMITH.ONION</h1>
@@ -50,7 +75,9 @@ const GunSelector = () => {
           setSelectedInventory={setSelectedInventories}
         />
       </div>
-      <button>Order now</button>
+      <button onClick={() => placeOrder()}>
+        Order now | ${getTotal()} USD
+      </button>
     </div>
   );
 };
