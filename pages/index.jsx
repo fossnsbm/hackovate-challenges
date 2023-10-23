@@ -32,6 +32,30 @@ export default function Home() {
   const [gunsPrice, setGunsPrice] = React.useState(0);
   const [invtPrice, setInvtPrice] = React.useState(0);
 
+  const [gunsList, setGunsList] = React.useState({});
+  const [invtList, setInvtList] = React.useState({});
+
+  function processGun(index, mode) {
+    if (mode > 0) {
+      setGunsPrice(gunsPrice + guns[index].price);
+    } else {
+      setGunsPrice(gunsPrice - guns[index].price);
+    }
+
+    return 0;
+  }
+  function processInv(index, mode) {
+    if (mode > 0) {
+      setInvtPrice(gunsPrice + guns[index].price);
+    } else {
+      setInvtPrice(gunsPrice - guns[index].price);
+    }
+    return 0;
+  }
+
+  const [invtQuantity, setInvtQuantity] = React.useState(0);
+  const [gunsQuantity, setGunsQuantity] = React.useState(0);
+
   const [hydrated, setHydrated] = React.useState(false);
 
   React.useEffect(() => {
@@ -55,7 +79,17 @@ export default function Home() {
 
         <div className={styles.cardHolder}>
           <div className={styles.card}>
-            <h4>Select Guns Quantity</h4>
+            <span className={styles.rail}>
+              <label>Select Guns Quantity</label>
+              <label>
+                <input
+                  type='number'
+                  onInputCapture={(e) => {
+                    setGunsQuantity(e.target.value);
+                  }}
+                />
+              </label>
+            </span>
 
             <table>
               <thead>
@@ -69,16 +103,23 @@ export default function Home() {
                   <br />
                 </tr>
                 {guns.map((gun, index) => (
-                  <tr
-                    key={index}
-                    onClick={() => {
-                      setGunsPrice(guns[index].price + gunsPrice);
-                    }}
-                  >
+                  <tr key={index}>
                     <td>
-                      <button>-</button>
-                      {gun.name}
-                      <button>+</button>
+                      <button
+                        onClick={() => {
+                          processGun(index, -1);
+                        }}
+                      >
+                        -
+                      </button>
+                      <label>{gun.name}</label>
+                      <button
+                        onClick={() => {
+                          processGun(index, 1);
+                        }}
+                      >
+                        +
+                      </button>
                     </td>
                     <td>{gun.price}</td>
                   </tr>
@@ -97,7 +138,17 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <h4>Select Inventory Quantity</h4>
+            <span className={styles.rail}>
+              <label>Select Inventory Quantity</label>
+              <label>
+                <input
+                  type='number'
+                  onInputCapture={(e) => {
+                    setInvtQuantity(e.target.value);
+                  }}
+                />
+              </label>
+            </span>
 
             <table>
               <thead>
@@ -111,16 +162,23 @@ export default function Home() {
                   <br />
                 </tr>
                 {invt.map((inv, index) => (
-                  <tr
-                    key={index}
-                    onClick={() => {
-                      setInvtPrice(invt[index].price + invtPrice);
-                    }}
-                  >
+                  <tr key={index}>
                     <td>
-                      <button>-</button>
-                      {inv.name}
-                      <button>+</button>
+                      <button
+                        onClick={() => {
+                          processInv(index, -1);
+                        }}
+                      >
+                        -
+                      </button>
+                      <label>{inv.name}</label>
+                      <button
+                        onClick={() => {
+                          processInv(index, 1);
+                        }}
+                      >
+                        +
+                      </button>
                     </td>
 
                     <td>{inv.price}</td>

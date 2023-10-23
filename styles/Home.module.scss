@@ -62,31 +62,54 @@
       background: #efeeef;
     }
 
+    td {
+      button {
+        display: inline-block;
+        width: 10%;
+        padding: 3px !important;
+        margin: 0 !important;
+        border-radius: 5px;
+        cursor: pointer;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+      }
+      label {
+        display: inline-block;
+        width: 80%;
+      }
+      button:first-child {
+        margin-right: auto;
+      }
+      button:last-child {
+        margin-left: auto;
+      }
+    }
+
     tr {
-      transform: scale(0.95);
-      cursor: pointer;
-
-      transition: 0.5s;
-
-      &:hover {
-        transform: scale(1);
-      }
-
-      & :first-child,
-      &:last-child {
-        transform: scale(1);
-        cursor: inherit;
-      }
+      gap: 10px;
     }
   }
 
   .rail {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+
+    input {
+      max-width: 40px;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
 
     label {
       &:first-child {
+        font-size: 20px;
+        font-weight: 500;
         margin-right: auto;
       }
 
