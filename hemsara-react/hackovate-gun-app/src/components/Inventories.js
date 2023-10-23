@@ -66,6 +66,7 @@ function Inventories({
       <div className="gun_total">
         <h4>Inventory subtotal</h4>
 
+        {/* issue 3 is updated */}
         <h4>
           USD{" "}
           {selectedInventories.reduce(function (prev, current) {
