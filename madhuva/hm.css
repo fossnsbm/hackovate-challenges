@@ -1,0 +1,66 @@
+
+
+
+
+
+.mid {
+   
+    text-align: center;
+    
+    margin-top: 0px;
+    align-items: center;
+}
+
+
+button{
+    padding: 10px;
+    margin:5px;
+    width: 120px;
+    align-items: center;
+}
+
+.rrig{
+
+    
+    
+    display: inline-block;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+td{
+    
+}
+
+table{
+    
+    
+   
+   margin: auto;
+    padding: 10px;
+    
+    border-radius: 10px;
+    margin: 10px;
+    
+
+}
+
+
+
+
+
+
+.s45 table{
+    background-color: beige;
+    width: 40%;
+}
+
+.b4{
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
