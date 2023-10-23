@@ -1,0 +1,48 @@
+
+.row{
+    display: flex;
+}
+.border{
+    margin-top: 1cm;
+    border-radius: 15px;
+    font-weight: 400;
+    width: 15cm;
+    border-color: black;
+}
+.top-option{
+    margin-top: 1cm;
+}
+.border2{
+margin-top: .5cm;
+background-color: rgb(201, 200, 200);
+width: 75%;
+margin-left: 2.5cm;
+border-radius: 5px;
+padding-top: 0.5cm;
+padding-bottom: 0.5cm;
+
+}
+button{
+border-radius: 5px;
+margin: 8px;
+border-color: rgb(118, 118, 118);
+width: 3.5cm;
+height: 1cm;
+}
+.input-col{
+    
+    font-weight: 500;
+    text-align: start;
+}
+.inpBox{
+width: 3cm;
+}
+.botRow{
+padding-top: 1.5rem;
+padding-bottom: 2rem;
+}
+.top-borderx{
+padding-top: 5rem;
+}
+
+
