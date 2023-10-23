@@ -54,13 +54,15 @@ function Guns({ guns, qty, selectedGuns, setGunQTY, setSelectedGuns }) {
       </div>
       <div className="gun_total">
         <h4>Gun subtotal</h4>
-        <h4>
+        <h4>USD 100.00</h4>
+
+        {/* <h4>
           USD
           {selectedGuns.reduce(function (prev, current) {
             return prev + current.price;
           }, 0)}
           .00
-        </h4>
+        </h4> */}
       </div>
     </div>
   );
