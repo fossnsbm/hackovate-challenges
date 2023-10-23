@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title">
+          <h1>Gunsmith.onion</h1>
+        </div>
+        <div class="col-1 card">
+          <div class="input-group">
+            <label for="quantity">Select Guns Quantity:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="guns-list-wrapper">
+            <ul class="gun-list">
+              <li>Assault-Rifle</li>
+              <li>Sniper</li>
+              <li>Shotgun</li>
+              <li>Machine-Gun</li>
+              <li>Pistol</li>
+              <li>Revolver</li>
+              <li>RPG</li>
+              <li>Laser-Gun</li>
+            </ul>
+          </div>
+          <div class="total">
+            <h3>Gun Subtotal:</h3>
+            <div class="value">
+              <span class="currency">$</span>
+              <span class="amount"><input type="text" name="subt" ></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 card">
+          <div class="input-group">
+            <label for="quantity">Select Inventory Quantity:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="inventory-list-wrapper">
+            <ul class="inventory-list">
+              <li>Medi-Kit</li>
+              <li>Molotov</li>
+              <li>Grenade</li>
+              <li>Sword</li>
+              <li>Knife</li>
+              <li>Armour</li>
+              <li>C4</li>
+              <li>Land-Mine</li>
+            </ul>
+          </div>
+          <div class="total">
+            <h3>Inventory Subtotal:</h3>
+            <div class="value">
+              <span class="currency">$</span>
+              <span class="amount"><input type="text" name="curr" ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div><button>Order Now</button></div>
+    </div>
+  </body>
+</html>
