@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gunsmith.Onion</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="column1">
+            <p>Select Gun Quantity <select id="gunQuantity"></p>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                </select>
+            <br>
+            <button id="go1">Assault-Rifle</button>
+            <button id="go2">Pistol</button> <br>
+            <button id="go3">Sniper</button>
+            <button id="go4">Revolver</button> <br>
+            <button id="go5">Shotgun</button>
+            <button id="go6">RPG</button> <br>
+            <button id="go7">Machine-Gun</button>
+            <button id="go8">Laser-Gun</button>
+            
+            <p>Gun Subtotal: <span id="gunSubtotal">$0.00</span></p>
+        </div>
+        <div class="column2">
+            <p>Select Inventory Quantity <select id="inventoryQuantity"></p>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                
+            </select>
+            <br>
+            <button id="io1">Medi-Kit</button>
+            <button id="io2">Molotov</button> <br>
+            <button id="io3">Granade</button>
+            <button id="io4">Sword</button> <br>
+            <button id="io5">Knife</button>
+            <button id="io6">Armour</button> <br>
+            <button id="io7">Land-Mine</button>
+            <button id="io8">C4</button>
+            
+            <p>Inventory Subtotal: <span id="inventorySubtotal">$0.00</span></p>
+        </div>
+    </div>
+    <button class="OrderNow">Order Now</button>
+</body>
+</html>

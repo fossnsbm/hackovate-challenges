@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.main {
+    display: flex;
+}
+
+.column1{
+    width: 100%;
+    padding: 50px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 50px; 
+    
+}
+
+.column2{
+    width: 100%;
+    padding: 50px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 50px;
+}
+
+.button-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    width: 48%;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.OrderNow{
+    width: 8%;
+    height: 20px;
+    border-radius: 5px;
+}
