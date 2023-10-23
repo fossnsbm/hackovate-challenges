@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.left-section, .right-section{
+    width: 45%;
+    margin: 10px;
+    border: 2px solid #000000;
+    border-radius: 5%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    
+}
+th, td{text-align: center;
+    padding: 10px;
+}
+h4{
+    text-align: center;
+}
+table td{
+    background-color: #ddd;
+    padding: 8px;
+}
+.btn{
+    display: block;
+    margin: auto;
+}
+

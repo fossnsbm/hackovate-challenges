@@ -1,34 +1,62 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Document</title>
- </head>
- <body>
+</head>
+<body>
     <h1>Gunsmith.onion</h1>
-    <label for="dropdown">select guns quanttity:</label>
-    <table>
+<div class="container">
+    <div class="left-section">
+    <label for="dropdown">Select Guns Quantity :</label>
+    <select name="num" id="num">
+        <option value="num1">1</option>
+        <option value="num2">2</option>
+        <option value="num2">3</option>
+    </select>
+    <table name="table">
         <tr>
-            <td>Assuault-rifle</td>
-            <td>pistol</td>
-            <td></td>
+            <td><button>Assault-Rifle</button></td> <td><button>Pistol</button></td>
         </tr>
         <tr>
-            <td>sniper</td>
-            <td>revolver</td>
+            <td><button>Sniper</button></td> <td><button>Revoiver</button></td>
         </tr>
         <tr>
-            <td>shoutgun</td>
-            <td>rpg</td>
+            <td><button>Shotgun</button></td> <td><button>RPG</button></td>
         </tr>
         <tr>
-            <td>machine-gun</td>
-            
-            <td>laser-gun</td>
+            <td><button>Machine-Gun</button></td> <td><button>Laser-Gun</button></td>
         </tr>
     </table>
+    <h4>Gun Subtotal: $<input type="text"></h4>
+</div>
 
-    <label>gun subtotal</label>
- </body>
- </html>
+<div class="right-section">
+    <label for="dropdown">Select Inventory Quantity :</label>
+    <select name="num" id="num">
+        <option value="num1">1</option>
+        <option value="num2">2</option>
+        <option value="num2">3</option>
+    </select>
+    <table name="table">
+        <tr>
+            <td><button>Medi-kit</button></td> <td><button>Molotov</button></td>
+        </tr>
+        <tr>
+            <td><button>Grenade</button></td> <td><button>Sword</button></td>
+        </tr>
+        <tr>
+            <td><button>Knife</button></td> <td><button>Armour</button></td>
+        </tr>
+        <tr>
+            <td><button>Land-Mine</button></td> <td><button>C4</button></td>
+        </tr>
+    </table>
+    <h4>Inventory Subtotal: $<input type="text"></h4>
+</div>
+</div>
+<button class="btn">Order Now</button>
+</body>
+</html>
