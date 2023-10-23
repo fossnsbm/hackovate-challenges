@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Gunsmith.onion
+        </title>
+        <style>
+            table{border-collapse:collapse;}
+            div {
+  width: 300px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+            }
+
+.btn:hover {background: #b58989;}
+
+div.all{
+    position: relative;
+    width: 1000px;
+    height: 500px;
+}
+
+div.second{
+    position: absolute;
+    top:15px;
+    right: 0;
+      
+}
+.center{
+    margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  
+}
+        </style>
+    </head>
+    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <div class="all">
+            <p style="font-size: large;"><Gunsmith class="onion"></Gunsmith></p>
+
+        <div class="first">
+        <form action="/action_page.php">
+            <label for="qguns">Select Guns Quantity:</label>
+            <select name="q" id="q">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+            <br><br>
+            <button class="btn assault rifle">Assault-Rifle</button>
+            <button class="btn pistol">Pistol</button>
+            <br>
+            <button class="btn sniper">Sniper</button>
+            <button class="btn revolver">Revolver</button>
+            <br>
+            <button class="btn shotgun">Shotgun</button>
+            <button class="btn rpg">RPG</button>
+            <br>
+            <button class="btn machine gun">Machine-Gun</button>
+            <button class="btn laser gun">Laser-Gun</button>
+            <br><br>
+
+            <label for="pguns">Gun Subtotal:$</label>
+            <input type="text" id="gtotal">
+            <br>
+        </form>
+        
+    </div>
+
+    <div class="second">
+        <form action="/action_page.php">
+            <label for="qguns">Select Inventory Quantity:</label>
+            <select name="i" id="i">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <br><br>
+            <button class="btn medkit">Med-Kit</button>
+            <button class="btn molotov">Molotov</button>
+            <br>
+            <button class="btn grenade">Grenade</button>
+            <button class="btn sword">Sword</button>
+            <br>
+            <button class="btn knife">Knife</button>
+            <button class="btn armour">Armour</button>
+            <br>
+            <button class="btn landmine">Land-Mine</button>
+            <button class="btn c4">C4</button>
+            <br><br>
+
+            <label for="pguns">Inventory Subtotal:$</label>
+            <input type="text" id="itotal">
+            <br>
+          </form>
+
+    </div>
+</div>
+
+<div class="center">
+    <input type="submit" button  value="Order Now">
+</div>
+    </body>
+</html>
