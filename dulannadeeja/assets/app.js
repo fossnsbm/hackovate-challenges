@@ -111,3 +111,16 @@ function calculateInventoryTotal() {
 }
 
 
+const buyBtn = document.querySelector('.buy-btn');
+
+buyBtn.addEventListener('click', () => {
+    if (gunQuantity.value > selectedGunList.length) {
+        alert('Please select ' + gunQuantity.value + ' guns.');
+        return;
+    }
+    if (inventoryQuantity.value > selectedInventoryList.length) {
+        alert('Please select ' + inventoryQuantity.value + ' inventory.');
+        return;
+    }
+});
+
