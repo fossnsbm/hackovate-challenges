@@ -51,7 +51,7 @@
                 <div>
                     <tr>
                         <td><label for="">Select Inventory Quantity:</label></td>
-                        <td><select name="qty" id="qty-2" onchange="getQuantity()">
+                        <td><select name="qty" id="qty-2" onchange="getQuantity2()">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -60,25 +60,25 @@
                     </tr>
                     <div>
                         <tr class="menu-box">
-                            <td><button type="button">Medi-Kit</button></td>
-                            <td><button type="button">Molotov</button></td>
+                            <td><button type="button" value="500" onclick="calculatePrice2(500)">Medi-Kit</button></td>
+                            <td><button type="button" value="1000" onclick="calculatePrice2(1000)">Molotov</button></td>
                         </tr>
                         <tr class="menu-box">
-                            <td><button type="button">Grenade</button></td>
-                            <td><button type="button">Sword</button></td>
+                            <td><button type="button" value="1500" onclick="calculatePrice2(1500)">Grenade</button></td>
+                            <td><button type="button" value="2500" onclick="calculatePrice2(2500)">Sword</button></td>
                         </tr>
                         <tr class="menu-box">
-                            <td><button type="button">Knife</button></td>
-                            <td><button type="button">Armour</button></td>
+                            <td><button type="button" value="2000" onclick="calculatePrice2(2000)">Knife</button></td>
+                            <td><button type="button" value="3000" onclick="calculatePrice2(3000)">Armour</button></td>
                         </tr>
                         <tr class="menu-box">
-                            <td><button type="button">Land-Mine</button></td>
-                            <td><button type="button">C4</button></td>
+                            <td><button type="button" value="4000" onclick="calculatePrice2(4000)">Land-Mine</button></td>
+                            <td><button type="button" value="4000" onclick="calculatePrice2(4000)">C4</button></td>
                         </tr>
                     </div>
                     <tr>
                         <td><label for="">Gun Subtotal:</label></td>
-                        <td>$</td>
+                        <td id="price2"></td>
                     </tr>
                 </div>
             </table>
