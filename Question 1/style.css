@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:40%;
+    border:1px solid black;
+    border-radius:20px;
+    padding:20px;
+    float:left;
+    margin:5%;
+}
+
+.container .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mid-item{
+    background-color: rgb(214, 213, 210);
+    margin: auto;
+    
+}
+
+table{
+    margin:20px auto;
+    border-spacing: 30px 20px;;
+}
+
+table th{
+    padding:5px 20px;
+    border:1px solid black ;
+    border-radius:5px;
+    font-size: 15px;;
+}
+.last #toatl h5 ::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background-color: blue;
+    
+}
+.last{
+    display:flex;
+    justify-content: space-between;
+}
+button{
+    margin:auto;
+}
+
+@media screen and (max-width : 750px){
+    table{
+        margin:20px auto;
+        
+    }
+    table th{
+        padding:5px 20px;
+        border:1px solid black ;
+        border-radius:5px;
+        font-size: 10px;;
+    }   	
+}
+@media screen and (max-width : 680px){
+    table{
+        margin:20px auto;
+        
+    }
+    table th{
+        padding:5px 5px;
+        border:1px solid black ;
+        border-radius:5px;
+        font-size: 10px;;
+    }  
+    .last{
+        display:block;
+        justify-content: space-between;
+    } 	
+}
