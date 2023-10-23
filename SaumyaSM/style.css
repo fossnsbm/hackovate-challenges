@@ -1,0 +1,30 @@
+.card-body{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.button-container{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.card.bg-secondary.text-white{
+    width: 25rem;
+}
+.card{
+    align-items: center;
+}
+.btn.btn-light{
+    width: 9rem;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+@media screen and (max-width: 600px) {
+.card-container{
+    flex-direction: column;
+}
+  }
