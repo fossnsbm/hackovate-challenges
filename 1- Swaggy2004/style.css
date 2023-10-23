@@ -1,0 +1,43 @@
+body{
+    margin: 2rem;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+form{
+    width: auto;
+    border: 1px black solid;
+    border-radius: 6px;
+    padding: 20px 10px;
+    text-align: justify;
+}
+table{
+    border-collapse: collapse;
+}
+
+select{
+    width: 30%;
+    text-align: center;
+}
+
+td{
+    padding: 10px;
+}
+
+.menu-box{
+    background-color: darkgray;
+    text-align: center;
+    padding: 100px 80px;
+}
+
+button{
+    width: 130px;
+    text-wrap: nowrap;
+    border: 1px black solid;
+    border-radius: 6px;
+    padding: 10px;
+}
