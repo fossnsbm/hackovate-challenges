@@ -5,77 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <style>
-    .selectgun .selet_g_q table{
+    .selet_g_q{
+        margin-right: 5%;
+    }
+    .marketstore{
+        margin: 10%;
+
+    }
+    .marketstore h1{
+        font-size: 42px;
+        font-style: initial;
+    }
+    .selectgun{
+        display: flex;
+        flex-direction: row;
+        margin: 10%;
+    }
+    .selectgun .selet_g_q{
         border: 1px solid black;
+        padding: auto;
         border-collapse: collapse;
-        width: 100%;
+        width: 110%;
+        border-radius: 15px;
+        padding-left: 50px;
+    }
+    .selectgun .sele_in_qun{
+        border: 1px solid black;
+        padding: auto;
+        border-collapse: collapse;
+        width: 120%;
+        border-radius: 15px;
+    }
+    table{
+        padding: 2%;
     }
     .pannel{
-        ba
+        border: 1px solid black;
+        align-items: center;
+        margin-left: 2%;
     }
+    h3{
+        font-size: 20px;
+        font-style: initial;
+    }
+    td{
+        padding: 2%;
+    }
+    button{
+        width: 150px;
+        padding: auto;
+    }
+    tr{
+        margin-left: 25px;
+    }
+    .tab1{
+        background: none;
+    }
+    .tab1 div{
+        background-color: #8c8787;
+    }
+
+    @media screen and (max-width: 500px) { 
+        table{
+            width: 70%;
+        }
+    
+    } 
+    @media screen and (max-width: 800px) {
+    table {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+}
+}
+button{
+    padding:5px; 
+    margin: 2%;
+}
+
 </style>
 <body>
-    <h1>Gunsmith.onion</h1>
-    <div class="selectgun">
-        <div class="selet_g_q">
-            <table>
-                <tr>
-                    <td><h3>Select Gun Quantity</h3></td>
-                    <td><input type="number"></td>
-                </tr>
-                <div class="pannel">
+    <form action="#">
+        <div class="marketstore">
+            <h1>Gunsmith.onion</h1>
+        <div class="selectgun">
+            <div class="selet_g_q">
+                <table>
                     <tr>
-                        <td><Button>Assault-Rifile</Button></td>
-                        <td><button>Pistol</button></td>
+                        <td><h3>Select Gun Quantity</h3></td>
+                        <td><input type="number"></td>
                     </tr>
+                </table>
+                    <div style="padding-left: 30px;
+                    display: inline-block; 
+                    background-color: #8c8787;
+                    border-radius: 4px;
+                    width: 400px;
+                    margin-bottom: 2%;
+                    ">
+                            <tr>
+                                <td><Button style="padding:5px; margin: 2%;">Assault-Rifile</Button></td>
+                                <td><button style="padding:5px; margin: 2%;">Pistol</button></td>
+                            </tr>
+                            <tr>
+                                <td><button>Sniper</button></td>
+                                <td><button>Revolver</button></td>
+                            </tr>
+                            <tr>
+                                <td><button>Shotgun</button></td>
+                                <td><button>RPG</button></td>
+                            </tr>
+                            <tr>
+                                <td><button>Machine-Gun</button></td>
+                                <td><button>Laser-Gun</button></td>
+                            </tr>
+                    </div>
                     <tr>
-                        <td><button>Sniper</button></td>
-                        <td><button>Revolver</button></td>
+                        <td style="width: auto;">Gun Subtotal : $</td>
+                        <td style="margin-left: 25px;"><input type="text"></td>
                     </tr>
+            </div>
+            <div class="sele_in_qun">
+                <table>
                     <tr>
-                        <td><button>Shotgun</button></td>
-                        <td><button>RPG</button></td>
+                        <td><h3>Select Inventory Quantity</h3></td>
+                        <td><input type="number"></td>
                     </tr>
+                </table>
+                    <div style="padding-left: 30px;
+                    display: inline-block; 
+                    background-color: #8c8787;
+                    border-radius: 4px;
+                    width: 400px;
+                    padding: 2%;
+                    margin: 3%;
+                    ">
+                        <tr>
+                            <td><Button>Medi-Kit</Button></td>
+                            <td><button>Molotov</button></td>
+                        </tr>
+                        <tr>
+                            <td><button>Grenade</button></td>
+                            <td><button>Sword</button></td>
+                        </tr>
+                        <tr>
+                            <td><button>Knife</button></td>
+                            <td><button>Armour</button></td>
+                        </tr>
+                        <tr>
+                            <td><button>Land-Mine</button></td>
+                            <td><button>C4</button></td>
+                        </tr>
+                    </div>
                     <tr>
-                        <td><button>Machine-Gun</button></td>
-                        <td><button>Laser-Gun</button></td>
-                    </tr>
-                    <tr>
-                        <td>Gun Subtotal : $</td>
+                        <td>Inventory Subtotal : $</td>
                         <td><input type="text"></td>
                     </tr>
-                </div>
-            </table>
+            </div>
         </div>
-        <div class="sele_in_qun">
-            <table>
-                <tr>
-                    <td><h3>Select Inventory Quantity</h3></td>
-                    <td><input type="number"></td>
-                </tr>
-                <tr>
-                    <td><Button>Medi-Kit</Button></td>
-                    <td><button>Molotov</button></td>
-                </tr>
-                <tr>
-                    <td><button>Grenade</button></td>
-                    <td><button>Sword</button></td>
-                </tr>
-                <tr>
-                    <td><button>Knife</button></td>
-                    <td><button>Armour</button></td>
-                </tr>
-                <tr>
-                    <td><button>Land-Mine</button></td>
-                    <td><button>C4</button></td>
-                </tr>
-                <tr>
-                    <td>Inventory Subtotal : $</td>
-                    <td><input type="text"></td>
-                </tr>
-            </table>
+        <center>
+            <input type="submit" value="Order Now" id="order-btn" class="btn" style="background-color: black; color: white;">
+        </center>
         </div>
-    </div>
+    </form>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </html>
