@@ -64,3 +64,30 @@ table{
 
 
 
+
+body {
+ 
+    display: flex;
+ 
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.ce {
+ 
+    display: flex;
+    
+    flex-direction: row;
+    
+    align-items: center;
+}
+
+.mid {
+  
+    text-align: center;
+    
+    margin-top: 20px;
+}
+
+
