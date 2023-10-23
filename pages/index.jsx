@@ -42,6 +42,16 @@ export default function Home() {
 
   // let number = numeros();
 
+  const [hydrated, setHydrated] = React.useState(false);
+
+  React.useEffect(() => {
+    setHydrated(true);
+  }, []);
+  if (!hydrated) {
+    // Returns null on first render, so the client and server match
+    return null;
+  }
+
   return (
     <>
       <Head>
@@ -76,7 +86,11 @@ export default function Home() {
                       setGunsPrice(guns[index].price + gunsPrice);
                     }}
                   >
-                    <td>{gun.name}</td>
+                    <td>
+                      <button>-</button>
+                      {gun.name}
+                      <button>+</button>
+                    </td>
                     <td>{gun.price}</td>
                   </tr>
                 ))}
@@ -114,7 +128,12 @@ export default function Home() {
                       setInvtPrice(invt[index].price + invtPrice);
                     }}
                   >
-                    <td>{inv.name}</td>
+                    <td>
+                      <button>-</button>
+                      {inv.name}
+                      <button>+</button>
+                    </td>
+
                     <td>{inv.price}</td>
                   </tr>
                 ))}
@@ -128,11 +147,6 @@ export default function Home() {
                 </tr>
               </tbody>
             </table>
-            {/*
-            <span className={styles.rail}>
-              <label></label>
-              <label></label>
-            </span> */}
           </div>
         </div>
 

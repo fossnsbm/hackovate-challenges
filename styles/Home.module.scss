@@ -65,10 +65,18 @@
     }
 
     tr {
+      transform: scale(0.95);
       cursor: pointer;
+
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(1);
+      }
 
       & :first-child,
       &:last-child {
+        transform: scale(1);
         cursor: inherit;
       }
     }
@@ -88,5 +96,17 @@
         margin-left: auto;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+
+    padding: 10px;
+  }
+  .cardHolder {
+    flex-direction: column;
   }
 }
