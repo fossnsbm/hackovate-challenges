@@ -37,12 +37,11 @@ const GunSelector = () => {
       alert("Please select items");
       return;
     }
-    alert("Thank you for your order");
+    alert("Thank you for using gunsmith");
     setSelectedInventories([]);
     setSelectedGuns([]);
     setGunQTY(1);
     setInventoryQTY(1);
-    // hello
   }
 
   function getTotal() {
