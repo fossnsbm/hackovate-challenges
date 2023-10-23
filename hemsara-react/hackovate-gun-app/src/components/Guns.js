@@ -54,8 +54,7 @@ function Guns({ guns, qty, selectedGuns, setGunQTY, setSelectedGuns }) {
       </div>
       <div className="gun_total">
         <h4>Gun subtotal</h4>
-
-
+        {/* issue 3 is updated */}
         <h4>
           USD
           {selectedGuns.reduce(function (prev, current) {
