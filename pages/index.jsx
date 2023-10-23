@@ -29,18 +29,8 @@ export default function Home() {
     { name: "Landmine", price: 4000 },
   ];
 
-  // const [hydrated, setHydrated] = React.useState(false);
-  // React.useEffect(() => {
-  //   setHydrated(true);
-  // }, []);
-  // if (!hydrated) {
-  //   return null;
-  // }
-
   const [gunsPrice, setGunsPrice] = React.useState(0);
   const [invtPrice, setInvtPrice] = React.useState(0);
-
-  // let number = numeros();
 
   const [hydrated, setHydrated] = React.useState(false);
 
@@ -48,7 +38,6 @@ export default function Home() {
     setHydrated(true);
   }, []);
   if (!hydrated) {
-    // Returns null on first render, so the client and server match
     return null;
   }
 
