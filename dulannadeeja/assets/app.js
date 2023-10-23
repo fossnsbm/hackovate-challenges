@@ -27,6 +27,8 @@ gunItems.forEach((item) => {
             item.classList.add('selected');
             selectedGunList.push(item);
         }
+
+        calculateGunTotal();
     });
 });
 
@@ -35,8 +37,6 @@ const inventoryQuantity = document.querySelector('#inventory-quantity');
 const inventoryList = document.querySelector('.inventory-list');
 
 const inventoryItems = inventoryList.querySelectorAll('li');
-
-console.log(inventoryItems);
 
 const selectedInventoryList = [];
 
@@ -59,6 +59,55 @@ inventoryItems.forEach((item) => {
             item.classList.add('selected');
             selectedInventoryList.push(item);
         }
+        calculateInventoryTotal();
+
     });
 }
 );
+
+
+const gunPriceList = {
+    'Assault-Rifle': 1000,
+    'Sniper': 2000,
+    'Pistol': 50,
+    'Shotgun': 1500,
+    'Revolver': 500,
+    'Mashine-Gun': 2500,
+    'RPG': 50,
+    'Laser-Gun': 3500
+}
+
+const inventoryPriceList = {
+    'Medi-Kit': 500,
+    'Molotov': 1000,
+    'Grenade': 1500,
+    'Knife': 2000,
+    'Sword': 2500,
+    'Armor': 3000,
+    'C4': 3500,
+    'Land-Mine': 4000
+}
+
+const gunTotalElement = document.querySelector('.gun-amount');
+
+function calculateGunTotal() {
+    let total = 0;
+    selectedGunList.forEach((item) => {
+        total += gunPriceList[item.id];
+    });
+    console.log(total);
+    gunTotalElement.innerHTML = total;
+}
+
+const inventoryTotalElement = document.querySelector('.inventory-amount');
+
+function calculateInventoryTotal() {
+    let total = 0;
+    selectedInventoryList.forEach((item) => {
+        total += inventoryPriceList[item.id];
+    });
+    console.log(total);
+    inventoryTotalElement.innerHTML = total;
+}
+
+
