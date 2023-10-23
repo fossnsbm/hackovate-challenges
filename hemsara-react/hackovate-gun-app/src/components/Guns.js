@@ -2,11 +2,11 @@ import "../index.scss";
 
 function Guns({ guns, qty, selectedGuns, setGunQTY, setSelectedGuns }) {
   function addItem(gun) {
-    if (selectedGuns.length >= qty) {
+    let contains = selectedGuns.some((item) => item.name === gun.name);
+    if (selectedGuns.length >= qty && !contains) {
       alert("Quantity limit exceeded");
       return;
     }
-    let contains = selectedGuns.some((item) => item.name === gun.name);
     if (!contains) {
       setSelectedGuns([...selectedGuns, gun]);
     } else {
