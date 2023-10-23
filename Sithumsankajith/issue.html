@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .border{
+            margin-top: 1cm;
+            border-radius: 15px;
+            font-weight: 400;
+            width: 15cm;
+            border-color: black;
+        }
+        .top-option{
+            margin-top: 1cm;
+        }
+       .border2{
+        margin-top: .5cm;
+        background-color: rgb(201, 200, 200);
+        width: 75%;
+        margin-left: 2.5cm;
+        border-radius: 5px;
+        padding-top: 0.5cm;
+        padding-bottom: 0.5cm;
+        
+       }
+       button{
+        border-radius: 5px;
+        margin: 8px;
+        border-color: rgb(118, 118, 118);
+        width: 3.5cm;
+        height: 1cm;
+       }
+       .input-col{
+            
+            font-weight: 500;
+            text-align: start;
+       }
+       .inpBox{
+        width: 3cm;
+       }
+       .botRow{
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+       }
+       .top-borderx{
+        padding-top: 5rem;
+       }
+      
+       
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container-fluid text-center">
+            <
+            <div class="row">
+                <div class="col pt-5 top-border">
+                    <div class="gunsmith text-start">
+                        <h3>Gunsmith.onion</h3>
+
+                    </div>
+                    <div class="border">
+                        <div class="row top-option">
+                            <div class="col">Select guns quantity</div>
+                            <div class="col">
+                                <select name="select-quantity" class="w-25" id="">
+                                    <option value="1">1</option>
+                                    <option value="1">2</option>
+                                    <option value="1">3</option>
+                                    <option value="1">4</option>
+                                    <option value="1">5</option>
+                                </select>
+                            </div>
+                            </div>
+                            <div class="border2">
+                                <div class="row cols-2">
+                                    <div class="col">
+                                        <button>Assault-Rifle</button>
+                                    </div>
+                                    
+                                    <div class="col">
+                                        <button>Pistol</button>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button>Sniper</button>
+                                        </div>
+                                        <div class="col">
+                                            <button>Revolver</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button>Shotgun</button>
+                                        </div>
+                                        <div class="col">
+                                            <button>RPG</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button>Machine-Gun</button>
+                                        </div>
+                                        <div class="col">
+                                            <button>Laser-Gun</button>
+                                        </div>
+                                    </div>
+                                    
+                                
+                            </div>
+                        
+
+                            <div class="row botRow">
+                                <div class="col">
+                                    <h6>Gun Subtotal: </h6>
+                                </div>
+                                <div class="col input-col">$
+                                    <input class="inpBox" type="text" name="total" id="">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col top-borderx">
+                    <div class="border">
+                        <div class="row top-option">
+                            <div class="col">Select Inventory quantity</div>
+                            <div class="col">
+                                <select name="select-quantity" class="w-25" id="">
+                                    <option value="1">1</option>
+                                    <option value="1">2</option>
+                                    <option value="1">3</option>
+                                    <option value="1">4</option>
+                                    <option value="1">5</option>
+                                </select>
+                            </div>
+                            </div>
+                            <div class="border2">
+                                <div class="row cols-2">
+                                    <div class="col">
+                                        <button>Medi-Kit</button>
+                                    </div>
+                                    
+                                    <div class="col">
+                                        <button>Molotov</button>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button>Grenade</button>
+                                        </div>
+                                        <div class="col">
+                                            <button>Sward</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button>Knife</button>
+                                        </div>
+                                        <div class="col">
+                                            <button>Armour</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button>Land-Mine</button>
+                                        </div>
+                                        <div class="col">
+                                            <button>C4</button>
+                                        </div>
+                                    </div>
+                                    
+                                
+                            </div>
+                        
+
+                            <div class="row botRow">
+                                <div class="col">
+                                    <h6>Inventory Subtotal: </h6>
+                                </div>
+                                <div class="col input-col">$
+                                    <input class="inpBox" type="text" name="total" id="">
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+        <div class="divx  text-center pt-5 ">
+            <button>Order Now</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
