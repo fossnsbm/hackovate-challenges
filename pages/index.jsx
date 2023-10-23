@@ -32,6 +32,80 @@ export default function Home() {
   const [gunsPrice, setGunsPrice] = React.useState(0);
   const [invtPrice, setInvtPrice] = React.useState(0);
 
+  const [gunsList, setGunsList] = React.useState({
+    0: 0,
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: 0,
+  });
+  const [invtList, setInvtList] = React.useState({
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: 0,
+  });
+
+  function processGun(index, mode) {
+    if (mode > 0) {
+      gunsList[index] = gunsList[index] + 1;
+
+      let x = 0;
+      for (const [key, value] of Object.entries(gunsList)) {
+        if (value > 0) {
+          x += 1;
+        }
+
+        if (x > gunsQuantity) {
+          alert(`You can only select upto ${gunsQuantity} of guns!`);
+          break;
+        }
+      }
+
+      setGunsPrice(gunsPrice + guns[index].price);
+    } else {
+      setGunsPrice(gunsPrice - guns[index].price);
+    }
+
+    return 0;
+  }
+  function processInv(index, mode) {
+    if (mode > 0) {
+      invtList[index] = invtList[index] + 1;
+
+      let x = 0;
+      for (const [key, value] of Object.entries(invtList)) {
+        if (value > 0) {
+          x += 1;
+        }
+
+        if (x > invtQuantity) {
+          alert(`You can only select upto ${invtQuantity} of inventories!`);
+          break;
+        }
+      }
+      setInvtPrice(gunsPrice + guns[index].price);
+    } else {
+      setInvtPrice(gunsPrice - guns[index].price);
+    }
+    return 0;
+  }
+
+  const [invtQuantity, setInvtQuantity] = React.useState(0);
+  const [gunsQuantity, setGunsQuantity] = React.useState(0);
+
   const [hydrated, setHydrated] = React.useState(false);
 
   React.useEffect(() => {
@@ -39,6 +113,34 @@ export default function Home() {
   }, []);
   if (!hydrated) {
     return null;
+  }
+
+  function validateOrder() {
+    let x = 0;
+    for (const [key, value] of Object.entries(gunsList)) {
+      if (value > 0) {
+        x += 1;
+      }
+    }
+
+    if (x != gunsQuantity) {
+      alert(
+        `You can only select ${gunsQuantity} of guns you only have selected ${x}!`,
+      );
+    }
+
+    x = 0;
+    for (const [key, value] of Object.entries(invtList)) {
+      if (value > 0) {
+        x += 1;
+      }
+    }
+
+    if (x != invtQuantity) {
+      alert(
+        `You can only select ${invtQuantity} of guns you only have selected ${x}!`,
+      );
+    }
   }
 
   return (
@@ -55,7 +157,17 @@ export default function Home() {
 
         <div className={styles.cardHolder}>
           <div className={styles.card}>
-            <h4>Select Guns Quantity</h4>
+            <span className={styles.rail}>
+              <label>Select Guns Quantity</label>
+              <label>
+                <input
+                  type='number'
+                  onInputCapture={(e) => {
+                    setGunsQuantity(e.target.value);
+                  }}
+                />
+              </label>
+            </span>
 
             <table>
               <thead>
@@ -69,16 +181,23 @@ export default function Home() {
                   <br />
                 </tr>
                 {guns.map((gun, index) => (
-                  <tr
-                    key={index}
-                    onClick={() => {
-                      setGunsPrice(guns[index].price + gunsPrice);
-                    }}
-                  >
+                  <tr key={index}>
                     <td>
-                      <button>-</button>
-                      {gun.name}
-                      <button>+</button>
+                      <button
+                        onClick={() => {
+                          processGun(index, -1);
+                        }}
+                      >
+                        -
+                      </button>
+                      <label>{gun.name}</label>
+                      <button
+                        onClick={() => {
+                          processGun(index, 1);
+                        }}
+                      >
+                        +
+                      </button>
                     </td>
                     <td>{gun.price}</td>
                   </tr>
@@ -97,7 +216,17 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <h4>Select Inventory Quantity</h4>
+            <span className={styles.rail}>
+              <label>Select Inventory Quantity</label>
+              <label>
+                <input
+                  type='number'
+                  onInputCapture={(e) => {
+                    setInvtQuantity(e.target.value);
+                  }}
+                />
+              </label>
+            </span>
 
             <table>
               <thead>
@@ -111,16 +240,23 @@ export default function Home() {
                   <br />
                 </tr>
                 {invt.map((inv, index) => (
-                  <tr
-                    key={index}
-                    onClick={() => {
-                      setInvtPrice(invt[index].price + invtPrice);
-                    }}
-                  >
+                  <tr key={index}>
                     <td>
-                      <button>-</button>
-                      {inv.name}
-                      <button>+</button>
+                      <button
+                        onClick={() => {
+                          processInv(index, -1);
+                        }}
+                      >
+                        -
+                      </button>
+                      <label>{inv.name}</label>
+                      <button
+                        onClick={() => {
+                          processInv(index, 1);
+                        }}
+                      >
+                        +
+                      </button>
                     </td>
 
                     <td>{inv.price}</td>
@@ -139,7 +275,7 @@ export default function Home() {
           </div>
         </div>
 
-        <button>Order Now</button>
+        <button onClick={validateOrder()}>Order Now</button>
       </main>
     </>
   );
