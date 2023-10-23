@@ -1,0 +1,28 @@
+.table1{
+    border: 1px solid;
+    height: 270px;
+    width: 20%;
+}
+.guns{
+    background-color: beige;
+}
+.table2{
+    border: 1px solid;
+    height: 270px;
+    width: 400px;
+    margin-left: 1200px;
+    position: absolute;
+    top: 9%;
+    left: 0;
+}
+.submit{
+    align-content: center;
+}
+.order-now{
+    width: 100%;
+    background-color: #000;
+    color: aliceblue;
+    padding: 10px;
+    position: absolute;
+    left:0%;
+}
