@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- stylesheet -->
     <link rel="stylesheet" href="assets/main.css" />
+    <!-- javascript -->
+    <script src="assets/app.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -16,9 +18,10 @@
         <div class="col-1 card">
           <div class="input-group">
             <label for="quantity">Select Guns Quantity</label>
-            <select name="quantity" id="quantity">
+            <select name="quantity" id="gun-quantity">
+              <option value="0" selected>0</option>
               <option value="1">1</option>
-              <option value="2" selected>2</option>
+              <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
@@ -52,9 +55,10 @@
         <div class="col-2 card">
           <div class="input-group">
             <label for="quantity">Select Inventory Quantity</label>
-            <select name="quantity" id="quantity">
+            <select name="quantity" id="inventory-quantity">
+              <option value="0" selected>0</option>
               <option value="1">1</option>
-              <option value="2" selected>2</option>
+              <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
