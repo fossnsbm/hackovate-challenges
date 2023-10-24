@@ -1,41 +1,8 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.scss";
+import styles from "@/styles/index .module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const guns = [
-  { name: "Assault-Rifle", price: 1000 },
-  { name: "Sniper", price: 2000 },
-  { name: "Shotgun", price: 1500 },
-  { name: "Revolver", price: 500 },
-  { name: "Machine-Gun", price: 2500 },
-  { name: "Pistol", price: 50 },
-  { name: "RPG", price: 3000 },
-  { name: "Laser-Gun", price: 3500 },
-];
-
-const invt = [
-  { name: "Medi-Kit", price: 500 },
-  { name: "Molotov", price: 1000 },
-  { name: "Grenade", price: 1500 },
-  { name: "Knife", price: 2000 },
-  { name: "Sword", price: 2500 },
-  { name: "Armour", price: 3000 },
-  { name: "C4", price: 3500 },
-  { name: "Landmine", price: 4000 },
-];
-
-var gunsPrice = 0;
-var invtPrice = 0;
-
-function addToGunPrice(index) {
-  gunsPrice += guns[index].price;
-}
-
-function addToInvPrice(index) {
-  invtPrice += invt[index].price;
-}
 
 export default function Home() {
   return (
@@ -47,73 +14,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className={`${styles.main} ${inter.className}`}>
-        <h3>Gunsmith.onion</h3>
-
-        <div className={styles.cardHolder}>
-          <div className={styles.card}>
-            <span className={styles.rail}>
-              <label>Select Guns Quantity</label>
-              <label>
-                <input type='number' />
-              </label>
-            </span>
-
-            <table>
-              <thead>
-                <tr>
-                  <th>Guns</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {guns.map((gun, index) => (
-                  <tr key={index} onClick={addToGunPrice(index)}>
-                    <td>{gun.name}</td>
-                    <td>{gun.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
-            <span className={styles.rail}>
-              <label>Gun Subtotal</label>
-              <label>${gunsPrice}</label>
-            </span>
-          </div>
-
-          <div className={styles.card}>
-            <span className={styles.rail}>
-              <label>Select Inventory Quantity</label>
-              <input type='number' />
-            </span>
-
-            <table>
-              <thead>
-                <tr>
-                  <th>Inventory</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {invt.map((inv, index) => (
-                  <tr key={index} onClick={addToInvPrice(index)}>
-                    <td>{inv.name}</td>
-                    <td>{inv.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
-            <span className={styles.rail}>
-              <label>Inventory Subtotal</label>
-              <label>${invtPrice}</label>
-            </span>
-          </div>
-        </div>
-
-        <button>Order Now</button>
-      </main>
+      <main className={`${styles.main} ${inter.className}`}></main>
     </>
   );
 }
