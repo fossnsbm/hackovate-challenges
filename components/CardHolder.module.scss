@@ -1,0 +1,14 @@
+.CardHolder {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  flex-basis: 50;
+}
+
+.Card {
+  flex: 1;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+}
