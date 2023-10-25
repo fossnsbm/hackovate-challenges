@@ -1,0 +1,25 @@
+.ItemMenu {
+  table {
+    tr {
+      td {
+        padding: 5px;
+      }
+    }
+
+    button {
+      padding: 5px 8px;
+    }
+
+    input {
+      width: 50px;
+    }
+  }
+}
+
+.Item {
+  text-wrap: nowrap;
+}
+
+.number {
+  text-align: right;
+}
