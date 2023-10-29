@@ -110,6 +110,7 @@ function calculateInventoryTotal() {
     inventoryTotalElement.innerHTML = total;
 }
 
+
 const buyBtn = document.querySelector('.buy-btn');
 
 buyBtn.addEventListener('click', () => {
@@ -121,4 +122,16 @@ buyBtn.addEventListener('click', () => {
         alert('Please select ' + inventoryQuantity.value + ' inventory.');
         return;
     }
+
+    let total = 0;
+    selectedGunList.forEach((item) => {
+        total += gunPriceList[item.id];
+    });
+    selectedInventoryList.forEach((item) => {
+        total += inventoryPriceList[item.id];
+    });
+
+    document.querySelector('.popup-wrapper').style.display = 'flex';
+    document.querySelector('.sub-total').innerHTML = total;
+
 });
