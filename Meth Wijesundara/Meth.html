@@ -7,8 +7,8 @@
     <title>Document</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -21,7 +21,7 @@
         <div class="boxes">
         <div class="box1">
             Select guns quantity:&nbsp;&nbsp;
-            <select id="quantitySelect" size="1" >
+            <select id="gunQuantity" size="1" >
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -80,59 +80,16 @@
 
             </table>
             Gun Subtotal:&nbsp $ <input type= "number" name= "Total"  maxlength= "5" />
-            <script>
-                // Get the quantity select element
-const quantitySelect = document.getElementById("quantitySelect");
-
-// Get all the buttons by their IDs
-const buttons = [
-document.getElementById("BTN1"),
-document.getElementById("BTN2"),
-document.getElementById("BTN3"),
-document.getElementById("BTN4"),
-document.getElementById("BTN5"),
-document.getElementById("BTN6"),
-document.getElementById("BTN7"),
-document.getElementById("BTN8")
-];
-
-// Initialize a count to keep track of selected buttons
-let selectedCount = 0;
-
-// Add a click event listener to each button
-buttons.forEach(button => {
-button.addEventListener("click", () => {
-    if (button.classList.contains("selected")) {
-        // If the button is already selected, deselect it
-        button.classList.remove("selected");
-        selectedCount--;
-    } else {
-        // If the button is not selected, select it
-        button.classList.add("selected");
-        selectedCount++;
-    }
-
-    // Check if more than the selected quantity of buttons are selected
-    const selectedQuantity = parseInt(quantitySelect.value, 10);
-    if (selectedCount > selectedQuantity) {
-        alert(`You can select a maximum of ${selectedQuantity} buttons.`);
-        // Deselect the last selected button (the one just clicked)
-        button.classList.remove("selected");
-        selectedCount--;
-    }
-});
-});
-
-</script>
+            <script src="Meth.js"></script>
             
 
 
         </div>
         <div class="box2">
             Select Inventory Quantity:&nbsp;&nbsp;
-            <select id="quantitySelect">
+            <select id="inventQuantity" size="1">
                 <option value="1">1</option>
-                <option value="2" selected>2</option>
+                <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
@@ -140,36 +97,36 @@ button.addEventListener("click", () => {
             <table style="background-color:rgb(203, 211, 211)" border="0" color="red" align="center" >
                 <tr >
                     <td  align="center" style="height: 10px;">
-                        <button id="BTN1">Medi-Kit</button>
+                        <button id="BTN9">Medi-Kit</button>
                         
                     </td>
 
                     <td  align="center" style="height: 10px;">
-                        <button id="BTN2">Molotov</button>
+                        <button id="BTN10">Molotov</button>
                     </td>
      
                 </tr>
 
                 <tr >
                     <td align="center">
-                        <button id="BTN3">Grenade</button>
+                        <button id="BTN11">Grenade</button>
                         
                     </td>
                     <td align="center">
                         
-                        <button id="BTN4">Sword</button>
+                        <button id="BTN12">Sword</button>
                     </td>
                 </tr>
 
                 <tr >
                     <td align="center">
-                        <button id="BTN5">Knife</button>
+                        <button id="BTN13">Knife</button>
                         
                     </td>
 
                     <td align="center">
                         
-                        <button id="BTN6">Armour</button>
+                        <button id="BTN14">Armour</button>
                     </td>
                    
                     
@@ -177,11 +134,11 @@ button.addEventListener("click", () => {
 
                 <tr >
                     <td align="center">
-                        <button id="BTN7">Land-mine</button>
+                        <button id="BTN15">Land-mine</button>
                         
                     </td>
                     <td>
-                        <button id="BTN8">C4</button>
+                        <button id="BTN16">C4</button>
                     </td>
                    
                     
@@ -189,10 +146,23 @@ button.addEventListener("click", () => {
 
 
             </table>
+            
             Inventory Subtotal:&nbsp $ <input type= "number" name= "Total"  maxlength= "5" />
+            <script src="Meth2.js"></script>
         </div>
     </div>  
-        <div class="order"><center><button type="submit" name="submit"> Order now </button> </center></div>
+        <div class="order"><center><button type="submit" name="submit" id="orderBTN"> Order now </button> </center>
+        <script>
+            document.getElementById('orderBTN').onmouseover=function(){
+                this.style.backgroundColor='lightgreen';
+            }
+
+            document.getElementById('orderBTN').onmouseout=function(){
+                this.style.backgroundColor='';
+            }
+                
+            
+        </script></div>
     
 </div>
     
