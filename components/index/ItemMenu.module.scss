@@ -12,6 +12,9 @@
 
     input {
       width: 50px;
+      &[type="checkbox"] {
+        width: auto;
+      }
     }
   }
 }

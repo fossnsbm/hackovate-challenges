@@ -10,25 +10,25 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const GUNS = [
-    { i: 0, name: "Assault-Rifle", price: 1000, quantity: 0 },
-    { i: 1, name: "Sniper", price: 2000, quantity: 0 },
-    { i: 2, name: "Shotgun", price: 1500, quantity: 0 },
-    { i: 3, name: "Revolver", price: 500, quantity: 0 },
-    { i: 4, name: "Machine-Gun", price: 2500, quantity: 0 },
-    { i: 5, name: "Pistol", price: 50, quantity: 0 },
-    { i: 6, name: "RPG", price: 3000, quantity: 0 },
-    { i: 7, name: "Laser-Gun", price: 3500, quantity: 0 },
+    { i: 0, name: "Assault-Rifle", price: 1000, quantity: 0, selected: false },
+    { i: 1, name: "Sniper", price: 2000, quantity: 0, selected: false },
+    { i: 2, name: "Shotgun", price: 1500, quantity: 0, selected: false },
+    { i: 3, name: "Revolver", price: 500, quantity: 0, selected: false },
+    { i: 4, name: "Machine-Gun", price: 2500, quantity: 0, selected: false },
+    { i: 5, name: "Pistol", price: 50, quantity: 0, selected: false },
+    { i: 6, name: "RPG", price: 3000, quantity: 0, selected: false },
+    { i: 7, name: "Laser-Gun", price: 3500, quantity: 0, selected: false },
   ];
 
   const INVT = [
-    { i: 0, name: "Medi-Kit", price: 500, quantity: 0 },
-    { i: 1, name: "Molotov", price: 1000, quantity: 0 },
-    { i: 2, name: "Grenade", price: 1500, quantity: 0 },
-    { i: 3, name: "Knife", price: 2000, quantity: 0 },
-    { i: 4, name: "Sword", price: 2500, quantity: 0 },
-    { i: 5, name: "Armour", price: 3000, quantity: 0 },
-    { i: 6, name: "C4", price: 3500, quantity: 0 },
-    { i: 7, name: "Landmine", price: 4000, quantity: 0 },
+    { i: 0, name: "Medi-Kit", price: 500, quantity: 0, selected: false },
+    { i: 1, name: "Molotov", price: 1000, quantity: 0, selected: false },
+    { i: 2, name: "Grenade", price: 1500, quantity: 0, selected: false },
+    { i: 3, name: "Knife", price: 2000, quantity: 0, selected: false },
+    { i: 4, name: "Sword", price: 2500, quantity: 0, selected: false },
+    { i: 5, name: "Armour", price: 3000, quantity: 0, selected: false },
+    { i: 6, name: "C4", price: 3500, quantity: 0, selected: false },
+    { i: 7, name: "Landmine", price: 4000, quantity: 0, selected: false },
   ];
 
   return (
